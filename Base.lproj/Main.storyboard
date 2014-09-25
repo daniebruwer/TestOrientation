@@ -23,12 +23,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4YA-nY-gIJ">
-                                <rect key="frame" x="77" y="95" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                                <rect key="frame" x="77" y="95" width="261" height="30"/>
+                                <state key="normal" title="Normal Alert">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="btnClicked:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ojr-UI-f1d"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oGG-ri-hD3">
+                                <rect key="frame" x="82" y="148" width="261" height="30"/>
+                                <state key="normal" title="Extended Alert">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnExtendedClicked:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Sd2-YS-z77"/>
                                 </connections>
                             </button>
                         </subviews>

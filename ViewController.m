@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "UIExtendedAlertView.h"
 @interface ViewController ()
 
 @end
@@ -35,12 +35,23 @@
 - (IBAction)btnClicked:(id)sender {
     
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Hello"
-                                                    message:@"World"
+                                                    message:@"UIAlertView"
                                                    delegate:self
                                           cancelButtonTitle:@"OK"
                                           otherButtonTitles:nil];
     
     [alert show];
+}
+- (IBAction)btnExtendedClicked:(id)sender {
+    
+    UIExtendedAlertView *alert = [[UIExtendedAlertView alloc] initWithTitle:@"Hello"
+                                                    message:@"UIExtendedAlertView"
+                                                   delegate:self
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    
+    [alert show];
+    
 }
 
 @end
