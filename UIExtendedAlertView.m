@@ -14,6 +14,10 @@
 {
     return UIInterfaceOrientationMaskAll;
 }
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)orientation
+{
+    return YES;
+}
 -(BOOL)shouldAutorotate
 {
     return YES;
