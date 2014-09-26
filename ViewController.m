@@ -12,6 +12,8 @@
 
 @end
 
+#define DEGREES_RADIANS(angle) ((angle) / 180.0 * M_PI)
+
 @implementation ViewController
 
 - (void)viewDidLoad {
@@ -48,14 +50,27 @@
 }
 - (IBAction)btnExtendedClicked:(id)sender {
     
+    [UIApplication sharedApplication].statusBarOrientation = UIInterfaceOrientationPortraitUpsideDown;
+    
     UIExtendedAlertView *alert = [[UIExtendedAlertView alloc] initWithTitle:@"Hello"
                                                     message:@"UIExtendedAlertView"
                                                    delegate:self
                                           cancelButtonTitle:@"OK"
                                           otherButtonTitles:nil];
     
+//    alert.transform=CGAffineTransformMakeRotation(DEGREES_RADIANS(180));
+//    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
     [alert show];
     
+    
+}
+
+- (void)didPresentAlertView:(UIAlertView *)alertView
+{
+    [UIView beginAnimations:@"" context:nil];
+    [UIView setAnimationDuration:0.1];
+    alertView.transform =CGAffineTransformMakeRotation(DEGREES_RADIANS(90)); //CGAffineTransformRotate(alertView.transform, DEGREES_RADIANS(90));
+    [UIView commitAnimations];
 }
 
 @end
